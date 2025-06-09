@@ -1,18 +1,70 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
 @import url('./animations.css');
-
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
 @import url('./back-link.css');
-@import url('./footer.css');
+
+.page-center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 36px;
+      width: 371px;
+      height: 100%; 
+}
+.form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  
+  border-radius: 8px;
+  padding: 16px;
+  width: 370px;
+  height: 96px;
+ 
+}
+
+.label {
+  width: 272px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin: 8px auto;
+
+}
+
+.input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 360px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid #808080;
+  height: 40px;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+}
