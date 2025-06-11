@@ -1,6 +1,7 @@
 `use strict`;
-import SimpleLightbox from "simplelightbox"
-import "simplelightbox/dist/simple-lightbox.min.css"
+
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 
 const lightbox = new SimpleLightbox('.gallery a', {
@@ -10,7 +11,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
   
 const galleryContainer = document.querySelector('.gallery');
 export function createGallery(images) {
-    const markгp = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => {
+    const markup = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => {
         return `
         <li class="gallery-item">
           <a href="${largeImageURL}">
