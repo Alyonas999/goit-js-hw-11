@@ -11,8 +11,8 @@ const lightbox = new SimpleLightbox('.gallery a', {
   
 const galleryContainer = document.querySelector('.gallery');
 export function createGallery(images) {
-    const markup = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => {
-        return `
+    const markup = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => {  
+      return `
         <li class="gallery-item">
           <a href="${largeImageURL}">
             <img src="${webformatURL}" alt="${tags}" />
@@ -32,7 +32,6 @@ lightbox.refresh();
 }
 
 export function clearGallery() {
-    const galleryContainer = document.querySelector('.gallery');
     galleryContainer.innerHTML = '';
 }
 
@@ -44,4 +43,5 @@ export function showLoader() {
 export function hideLoader() {
     const loader = document.querySelector('.loader');
     loader.classList.add('hidden');
-  }
+}
+  

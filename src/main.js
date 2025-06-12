@@ -14,7 +14,6 @@ form.addEventListener('submit', async (event) => {
 
   try {
       const data = await getImagesByQuery(searchQuery);
-      
     if (data.hits.length === 0) {
       throw new Error('No images found');
     }
@@ -27,3 +26,4 @@ form.addEventListener('submit', async (event) => {
     hideLoader();
   }
 });
+form.reset();
