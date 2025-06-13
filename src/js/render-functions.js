@@ -18,10 +18,10 @@ export function createGallery(images) {
             <img src="${webformatURL}" alt="${tags}" />
           </a>
           <div class="info">
-            <p>Likes: ${likes}</p>
-            <p>Views: ${views}</p>
-            <p>Comments: ${comments}</p>
-            <p>Downloads: ${downloads}</p>
+            <p>Likes: <span>${likes}</span></p>
+            <p>Views: <span>${views}</span></p>
+            <p>Comments: <span>${comments}</span></p>
+            <p>Downloads: <span>${downloads}</span></p>
           </div>
         </li>
       `;
@@ -36,12 +36,18 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-    const loader = document.querySelector('.loader');
-    loader.classList.remove('hidden');
+  const loader = document.querySelector('.loader');
+  loader.classList.remove('hidden');
+  requestAnimationFrame(() => {
+    loader.classList.add('show'); 
+  });
 }
 
 export function hideLoader() {
-    const loader = document.querySelector('.loader');
+  const loader = document.querySelector('.loader');
+  loader.classList.remove('show');
+  setTimeout(() => {
     loader.classList.add('hidden');
+  }, 400); 
 }
   

@@ -4,6 +4,48 @@
 @import url('./animations.css');
 @import url('./back-link.css');
 
+span{
+  color: #333;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #ccc;
+  border-top-color: #4e75ff;
+  border-radius: 50%;
+  animation: spin 2s linear infinite, fadeIn 0.4s ease forwards;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.loader.show {
+  opacity: 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
   .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -54,12 +96,7 @@
     .info p {
       width: 48%;
       margin: 4px 0;
-    }
-  
-    .loader {
-      text-align: center;
-      font-size: 20px;
-     margin-top: 30px;
+      color: rgba(236, 41, 41, 1);
     }
  
         .hidden {
@@ -131,11 +168,4 @@
 .button:hover{
 background-color:#6c8cff;
 color: #fff;
-}
-
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
