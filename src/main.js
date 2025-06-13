@@ -15,6 +15,7 @@ form.addEventListener('submit', async (event) => {
       position: 'topRight',
       backgroundColor: 'orange',
     });
+    form.reset(); 
     return;
   }
 
@@ -30,6 +31,7 @@ form.addEventListener('submit', async (event) => {
         message: `Sorry, there are no images matching your search query. Please try again!`,
         position: 'topRight',
       });
+      form.reset(); 
       return; 
     }
 
